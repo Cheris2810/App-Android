@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- Thanh tìm kiếm (đặt ngoài ScrollView để luôn hiển thị) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:hint="Nhập ký tự Trung Quốc"
+            android:layout_height="48dp"
+            android:layout_marginBottom="0dp"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/buttonVoiceInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Write"
+            android:onClick="onVoiceInputButtonClicked"
+            android:background="#faebd7"
+            tools:ignore="HardcodedText" /> <!-- Thay đổi tên phương thức theo nhu cầu của bạn -->
+    </LinearLayout>
+
+    <!-- ScrollView chứa nội dung, cuộn được nhưng thanh tìm kiếm ở trên cùng sẽ không cuộn -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/word1TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="81sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/pronunciationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="25sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/wordTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Từ:"
+                android:textSize="25sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/translationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Dịch nghĩa:"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/definitionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Từ loại:"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/exampleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Ví dụ:"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/examplepinyinTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="25sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/videoTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Nét bút:"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:onClick="onBackButtonClicked"
+                android:layout_gravity="center"
+                android:layout_marginTop="45dp"
+                android:background="#faebd7"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">tanslations</string>
+    <string name="scan_image">scan_image</string>
+    <string name="predicted_character_text">Predicted character will be shown here</string>
+    <string name="additional_data_text">Additional Data</string>
+    <string name="voice_input_text">Ghi chữ</string>
+    <string name="back_to_main_text">Back to Main</string>
+</resources>

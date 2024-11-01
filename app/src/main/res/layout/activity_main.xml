@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:background="#FFFFFF"
+    android:textColor="@color/black">
+
+    <!-- Đặt EditText lên trên cùng -->
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:hint="Nhập ký tự Trung Quốc"
+        android:layout_height="48dp"
+        android:layout_marginBottom="0dp"
+        android:inputType="text" />
+
+    <!-- RecyclerView để hiển thị kết quả tìm kiếm -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:background="#FFFFFF"
+        android:textColor="@color/black"/>
+
+    <!-- ImageView cho hình ảnh đã chọn -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:contentDescription="Selected image"
+        android:layout_marginBottom="29dp"
+        android:layout_marginTop="35sp"/>
+
+    <!-- Nút để chọn hình ảnh từ thư viện -->
+    <Button
+        android:id="@+id/buttonPickImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick Image from Gallery"
+        android:layout_marginBottom="19dp"
+        android:background="#faebd7"/>
+
+    <!-- Nút để chạy mô hình -->
+    <Button
+        android:id="@+id/buttonRunModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Run Model"
+        android:background="#faebd7"/>
+
+</LinearLayout>

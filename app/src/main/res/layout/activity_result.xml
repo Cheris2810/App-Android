@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF"
+    tools:ignore="ExtraText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:hint="Nhập ký tự Trung Quốc"
+            android:layout_height="48dp"
+            android:layout_marginBottom="0dp"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/buttonVoiceInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Write"
+            android:onClick="onVoiceInputButtonClicked"
+            android:background="#faebd7"
+            tools:ignore="HardcodedText,UsingOnClickInXml" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/resultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Predicted character will be shown here"
+                android:textColor="@color/black"
+                android:textSize="81sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/additionalDataTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text="Additional Data"
+                android:layout_marginTop="21dp"
+                android:background="#FFFFFF"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/buttonBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:onClick="onBackButtonClicked"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:background="#faebd7"
+                tools:ignore="HardcodedText,UsingOnClickInXml" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
